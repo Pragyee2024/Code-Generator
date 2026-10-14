@@ -16,11 +16,23 @@
                 <p>Enter your text or URL above and click "Generate QR Code" to create a scannable QR code.</p>
             </div>
         </div>
-       
+        <div class="homeContainer">
+            <div class="home">
+                <h2>Enter text or URL</h2>
+                <input type="text" id="qrInput" placeholder="Enter text or URL">
+                <button id="generateBtn">Generate QR Code</button>
+            </div>
+        </div>
     </div>
 
 
-   
+    <div id="qrPopup">
+        <h2>QR Code</h2>
+        <img src="" alt="qr image">
+        <button id="downloadBtn">Download QR</button>
+        <button id="closeBtn">Close</button>
+    </div>
+
 
     <script src="app.js"></script>
 </body>
