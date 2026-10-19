@@ -37,3 +37,13 @@
 
 }
 
+
+.sidebar img {
+    width: 15%;
+    margin: 0 20px;
+}
+
+.sidebar .textContainer h1, p {
+    font-family: var(--font);
+    margin-bottom: 5px;
+}
