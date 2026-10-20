@@ -92,3 +92,20 @@
 #generateBtn:hover, #downloadBtn, #closeBtn {
     transform: scale(1.01);
 }
+
+#qrPopup {
+    height: 450px;
+    width: 300px;
+    background-color: black;
+    position: absolute;
+    bottom: 60%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out, opacity 0.5s, bottom 0.5s ease-in-out;
+}
