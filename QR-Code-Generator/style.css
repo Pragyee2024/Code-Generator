@@ -64,3 +64,15 @@
 .home h2 {
     font-family: var(--font);
 }
+
+#qrInput {
+    height: 25px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 15px 0 25px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: var(--font);
+}
+
