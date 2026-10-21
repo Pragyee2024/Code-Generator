@@ -124,3 +124,21 @@
     border-radius: 5px;
     margin: 20px 0 25px;
 }
+
+#qrPopup h2 {
+    color: white;
+    font-family: var(--font);
+}
+
+#downloadBtn {
+    width: 70%;
+    background-color: #fff;
+    color: black;
+    margin: 3px 0;
+}
+
+#closeBtn {
+    width: 70%;
+    border: 1px solid white;
+    margin: 3px 0;
+}
