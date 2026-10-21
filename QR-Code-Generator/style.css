@@ -109,3 +109,18 @@
     transform: scale(0);
     transition: transform 0.5s ease-in-out, opacity 0.5s, bottom 0.5s ease-in-out;
 }
+
+
+#qrPopup.show {
+    transform: scale(1);
+    opacity: 1;
+    bottom: 15%;
+}
+
+
+#qrImg {
+    width: 70%;
+    border: 8px solid white;
+    border-radius: 5px;
+    margin: 20px 0 25px;
+}
