@@ -32,3 +32,8 @@ downloadBtn.addEventListener('click', () => {
         link.click();
     })
 });
+
+closeBtn.addEventListener('click', () => {
+    qrPopup.classList.remove('show');
+    mainContainer.classList.remove('opacity');
+})
