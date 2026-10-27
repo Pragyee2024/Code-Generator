@@ -3,37 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon"  href="./Images/icon.jpg">
     <title>QR Code Generator</title>
+    <link rel="icon" href="./Images/icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id ="mainContainer">
-        <div class="sidebar">
-            <img src="./Images/icon.jpg" alt="qr png">
-            <div class="textContainer">
-                <h1>Generate QR codes for your URLs, text, or other data.</h1>
-                <p>Enter your text or URL above and click "Generate QR Code" to create a scannable QR code.</p>
+    <main class="page">
+        <header class="intro">
+            <img class="logo" src="./Images/icon.svg" alt="" width="44" height="44">
+            <h1>Turn any link or text into a QR code.</h1>
+            <p>Type below. The code updates as you type, and you can download it as PNG or SVG.</p>
+        </header>
+
+        <section class="tool">
+            <form class="controls" id="controls" autocomplete="off">
+                <label class="field">
+                    <span>Text or URL</span>
+                    <textarea id="qrInput" rows="3" placeholder="https://example.com"></textarea>
+                </label>
+
+                <div class="row">
+                    <label class="field">
+                        <span>Code color</span>
+                        <input type="color" id="fgColor" value="#12201C">
+                    </label>
+                    <label class="field">
+                        <span>Background</span>
+                        <input type="color" id="bgColor" value="#FFFFFF">
+                    </label>
+                </div>
+
+                <label class="field">
+                    <span>Size: <output id="sizeOut">320</output> px</span>
+                    <input type="range" id="size" min="160" max="640" step="20" value="320">
+                </label>
+
+                <label class="field">
+                    <span>Error correction</span>
+                    <select id="level">
+                        <option value="L">Low (7%) – smallest code</option>
+                        <option value="M" selected>Medium (15%)</option>
+                        <option value="Q">Quartile (25%)</option>
+                        <option value="H">High (30%) – survives scuffs</option>
+                    </select>
+                </label>
+
+                <label class="field">
+                    <span>Module shape</span>
+                    <select id="shape">
+                        <option value="square" selected>Square</option>
+                        <option value="round">Rounded</option>
+                        <option value="dot">Dots</option>
+                    </select>
+                </label>
+            </form>
+
+            <div class="preview">
+                <div class="frame" id="frame">
+                    <canvas id="qrCanvas" width="320" height="320" aria-label="Generated QR code"></canvas>
+                    <p class="empty" id="emptyMsg">Your QR code will appear here.</p>
+                </div>
+                <p class="warn" id="warnMsg" role="alert" hidden></p>
+                <div class="actions">
+                    <button type="button" id="downloadPng" disabled>Download PNG</button>
+                    <button type="button" id="downloadSvg" class="ghost" disabled>Download SVG</button>
+                    <button type="button" id="copyBtn" class="ghost" disabled>Copy image</button>
+                </div>
+                <p class="status" id="status" role="status"></p>
             </div>
-        </div>
-        <div class="homeContainer">
-            <div class="home">
-                <h2>Enter text or URL</h2>
-                <input type="text" id="qrInput" placeholder="Enter text or URL">
-                <button id="generateBtn">Generate QR Code</button>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-
-    <div id="qrPopup">
-        <h2>QR Code</h2>
-        <img src="" alt="qr image">
-        <button id="downloadBtn">Download QR</button>
-        <button id="closeBtn">Close</button>
-    </div>
-
-
+    <script src="qrcode.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
