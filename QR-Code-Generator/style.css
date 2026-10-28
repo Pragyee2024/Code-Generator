@@ -30,3 +30,45 @@ body {
     margin: 0 auto;
     padding: 56px 24px 72px;
 }
+
+.intro { 
+    max-width: 620px; 
+    margin-bottom: 40px; 
+}
+
+.logo { 
+    display: block; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+}
+
+.intro h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.intro p { 
+    color: var(--muted); 
+    font-size: 1.05rem; 
+    max-width: 52ch; 
+}
+
+.tool {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(300px, 1.1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.controls {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    gap: 20px;
+}
