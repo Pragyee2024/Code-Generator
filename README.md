@@ -12,6 +12,8 @@ A collection of QR code and barcode generators.
 
 ## Web app
 
+![QR code generator web app](screenshots/web-app.png)
+
 Open `QR-Code-Generator/index.html` in a browser. No install is needed, and it works offline (the fonts fall back to system fonts).
 
 Features:
