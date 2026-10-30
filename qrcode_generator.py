@@ -1,7 +1,7 @@
 import qrcode
 
 url = input("Enter the URL to generate QR code: ").strip()
-file_path = "H:\\QR code generator\\qrcode.png"
+file_path = "qrcode.png"
 
 qr = qrcode.QRCode()
 qr.add_data(url)
