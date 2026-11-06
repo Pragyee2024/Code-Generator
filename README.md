@@ -40,7 +40,3 @@ python barcode_generator.py
 ```
 
 The output is saved in the current folder as `qrcode.png` or `barcode.png`.
-
-## Credits
-
-- QR encoding in the web app: [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) by Kazuhiko Arase (MIT license)
